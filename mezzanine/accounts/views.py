@@ -45,6 +45,8 @@ def signup(request, template="accounts/account_signup.html"):
     """
     Signup form.
     """
+    return redirect("login")
+    
     profile_form = get_profile_form()
     form = profile_form(request.POST or None, request.FILES or None)
     if request.method == "POST" and form.is_valid():
